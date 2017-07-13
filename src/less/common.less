@@ -1,0 +1,103 @@
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
+@font-color: #333;
+
+body {
+  color: @font-color;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+@main-color: #141e3c;
+@font-color: #ffe100;
+@header-height: 70px;
+
+header {
+  position: fixed;
+  width: 100%;
+  height: @header-height;
+  min-width: 1100px;
+  background-color: @main-color;
+  color: @font-color;
+  text-align: center;
+}
+
+.header-logo {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.header-logo > img {
+  height: 30px;
+}
+
+.header-menu {
+  display: inline-block;
+  margin: 0px 50px;
+}
+
+.header-menu > li {
+  position: relative;
+  display: inline-block;
+  margin: 0px 20px;
+  width: 100px;
+  line-height: @header-height;
+  text-align: center;
+}
+
+.header-menu-btn > img {
+  height: 15px;
+  cursor: pointer;
+}
+
+.header-sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100px;
+  text-align: center;
+  background-color: @main-color;
+  line-height: 100%;
+}
+
+.header-sub-menu > li {
+  padding: 10px;
+  border-bottom: solid 2px @font-color;
+  font-family: 'Hanna', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.header-sub-menu > li:last-child {
+  border-bottom: none;
+}
+
+.header-sub-menu >li:hover {
+  background-color: @font-color;
+  color: @main-color;
+}
+
+.header-sns {
+  display: inline-block;
+  margin-right: 30px;
+  color: @main-color;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.header-sns > li {
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 10px;
+  background-color: @font-color;
+}
+
+
+
