@@ -1,9 +1,17 @@
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 
 @font-color: #333;
+@body-min-width: 1400px;
+
+html {
+  height: 100%;
+}
 
 body {
+  min-width: @body-min-width;
+  min-height: 100%;
   color: @font-color;
+  //overflow: hidden;
 }
 
 ul {
@@ -19,11 +27,12 @@ ul {
 header {
   position: fixed;
   width: 100%;
+  min-width: @body-min-width;
   height: @header-height;
-  min-width: 1100px;
   background-color: @main-color;
   color: @font-color;
   text-align: center;
+  z-index: 1000;
 }
 
 .header-logo {
@@ -52,6 +61,14 @@ header {
 .header-menu-btn > img {
   height: 15px;
   cursor: pointer;
+}
+
+.main-logo img {
+  position: fixed;
+  top: @header-height;
+  margin: 20px 47%;
+  width: 120px;
+  height: 120px;
 }
 
 .header-sub-menu {
@@ -99,5 +116,85 @@ header {
   background-color: @font-color;
 }
 
+@footer-height: 100px;
+@footer-top-height: 40px;
+
+footer {
+  position: relative;
+  width: 100%;
+  height: @footer-height;
+  font-family: 'Hanna', sans-serif;
+  background-color: #575757;
+}
+
+.footer-top {
+  height: @footer-top-height;
+  background-color: @main-color;
+}
+
+.footer-notice {
+  position: absolute;
+  display: inline-block;
+  left: 250px;
+  cursor: pointer;
+}
+
+.footer-notice > li {
+  display: inline-block;
+  padding: 0px 5px;
+  vertical-align: top;
+  line-height: @footer-top-height;
+
+  i {
+    line-height: @footer-top-height;
+  }
+}
+
+.footer-notice .fa {
+  font-size: 25px;
+}
+
+.footer-notice > li:nth-child(2) {
+  color: #fff;
+  font-size: 13px;
+}
+
+.footer-info {
+  position: absolute;
+  display: inline-block;
+  right: 250px;
+  line-height: @footer-top-height;
+  letter-spacing: 1px;
+}
+
+.footer-info > li {
+  display: inline-block;
+  padding: 0px 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-info > li > span {
+  padding-right: 3px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.bottom-info {
+  position: absolute;
+  left: 250px;
+  bottom: 5px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.bottom-logo img {
+  position: absolute;
+  right: 250px;
+  bottom: 20px;
+  width: 100px;
+}
 
 

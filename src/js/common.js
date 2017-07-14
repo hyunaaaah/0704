@@ -21,3 +21,7 @@ $('.header-menu > li').on('mouseover', function () {
 $('.header-menu > li').on('mouseout', function () {
     $(this).find('.header-sub-menu').hide();
 });
+
+$('.header-sub-menu > li').on('click', function () {
+    location.href = '../markets.html';
+});
